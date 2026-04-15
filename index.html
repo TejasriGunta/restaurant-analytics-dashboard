@@ -597,8 +597,7 @@ function drawLL(cat){
   document.getElementById('llStats').innerHTML=`
     <div class="stat-box"><div class="stat-box-lbl">Elasticity β</div><div class="stat-box-val" style="color:${elastic?RED:GREEN}">${el.beta.toFixed(4)}</div></div>
     <div class="stat-box"><div class="stat-box-lbl">R² Fit Quality</div><div class="stat-box-val" style="color:${el.r2>.2?GREEN:AMBER}">${el.r2.toFixed(4)}</div></div>
-    <div class="stat-box"><div class="stat-box-lbl">Avg Price / Unit Cost / Margin</div><div class="stat-box-val" style="color:var(--txt)">INR ${el.mean_price.toFixed(0)} &nbsp;/&nbsp; INR ${(info?info.unit_cost:0).toFixed(0)} &nbsp;/&nbsp; <span style="color:${info&&info.margin_pct<30?RED:GREEN}">${(info?info.margin_pct:0).toFixed(1)}%</span></div></div>
-    <div class="stat-box"><div class="stat-box-lbl">Pricing Power</div><div class="stat-box-val" style="color:${elastic?AMBER:GREEN}">${elastic?'Low — price hikes reduce revenue':'High — safe to optimize price'}</div></div>`;
+    <div class="stat-box"><div class="stat-box-lbl">Avg Price / Unit Cost / Margin</div><div class="stat-box-val" style="color:var(--txt)">INR ${el.mean_price.toFixed(0)} &nbsp;/&nbsp; INR ${(info?info.unit_cost:0).toFixed(0)} &nbsp;/&nbsp; <span style="color:${info&&info.margin_pct<30?RED:GREEN}">${(info?info.margin_pct:0).toFixed(1)}%</span></div></div>`;
   if(llChart) llChart.destroy();
   llChart=new Chart(document.getElementById('llChart'),{
     type:'scatter',
