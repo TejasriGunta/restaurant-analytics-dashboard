@@ -205,6 +205,25 @@ footer{text-align:center;padding:28px;border-top:1px solid var(--border);font-fa
       <div class="ch ch-m"><canvas id="profChart"></canvas></div>
     </div>
   </div>
+</div>
+
+<!-- PROMOTION EFFECTIVENESS & ROI -->
+<div class="pad" style="padding-top:16px;padding-bottom:24px">
+  <div class="card mt">
+    <div class="sh" style="color:#00d96a;border-color:rgba(0,217,106,.2)">Promotion Effectiveness & ROI</div>
+    <div style="font-size:.65rem;color:var(--dim);margin-bottom:12px">
+      Shows lift % vs base demand, projected ROI based on margin structure. Higher lift on high-margin items = best absolute ROI.
+    </div>
+    <table class="hm" id="promoTable" style="width:100%;font-size:.65rem">
+      <thead>
+        <tr>
+          <th>Category</th><th>Lift %</th><th>ROI Level</th><th>Margin %</th><th>Base Orders</th><th>With Promo</th><th>Incremental ∆</th>
+        </tr>
+      </thead>
+      <tbody id="promoBody"></tbody>
+    </table>
+  </div>
+
   <div class="card mt">
     <div class="sh">Promotion Effectiveness &mdash; Order Lift by Category</div>
     <div class="ch" style="height:240px"><canvas id="promoChart"></canvas></div>
@@ -291,22 +310,6 @@ footer{text-align:center;padding:28px;border-top:1px solid var(--border);font-fa
 
 
 <div class="pad" style="padding-top:16px;padding-bottom:24px">
-
-  <!-- PROMOTION EFFECTIVENESS & ROI -->
-  <div class="card mt">
-    <div class="sh" style="color:#00d96a;border-color:rgba(0,217,106,.2)">🎁 Promotion Effectiveness & ROI</div>
-    <div style="font-size:.65rem;color:var(--dim);margin-bottom:12px">
-      Shows lift % vs base demand, projected ROI based on margin structure. Higher lift on high-margin items = best absolute ROI.
-    </div>
-    <table class="hm" id="promoTable" style="width:100%;font-size:.65rem">
-      <thead>
-        <tr>
-          <th>Category</th><th>Lift %</th><th>ROI Level</th><th>Margin %</th><th>Base Orders</th><th>With Promo</th><th>Incremental ∆</th>
-        </tr>
-      </thead>
-      <tbody id="promoBody"></tbody>
-    </table>
-  </div>
 
   <!-- DEMAND FORECASTING -->
   <div class="card mt">
