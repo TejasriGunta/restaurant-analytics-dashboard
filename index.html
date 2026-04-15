@@ -683,7 +683,7 @@ function analyzeBusinessPerformance(){
       revenue:portData.total_revenue,
       margin_pct:portData.margin_pct,
       opex:OPEX[d.category],
-      roi_potential:d.lift_pct>100?'High':d.lift_pct>50?'Medium':'Low'
+      roi_potential:(d.lift_pct>35&&portData.margin_pct>60)?'High':(d.lift_pct>25||portData.margin_pct>70)?'Medium':'Low'
     };
   }).filter(x=>x).sort((a,b)=>b.lift_pct-a.lift_pct);
   
